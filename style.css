@@ -1,4 +1,4 @@
-/*<a href="https://www.google.com/maps/place/33%C2%B053'08.2%22N+35%C2%B029'52.7%22E/@33.8856087,35.4953957,17z/data=!3m1!4b1!4m4!3m3!8m2!3d33.8856087!4d35.4979706?hl=en&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" target="_blank" style="color: inherit; text-decoration: none;">*/
+/*<a href="https://www.google.com/maps/place/33%C2%B053'08.2%22N+35%C2%B029'52.7%22E/@33.8856087,35.4953957,17z/data=!3m1!4b1!4m4!3m3!8m2!3d33.8856087!4d35.4979706?hl=en&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" target="_blank" style="color: inherit; text-decoration: none;"> ;*/
 :root{
   --bg:#f3f6ff;
   --card:#ffffff;
@@ -328,11 +328,10 @@ h1, h2, h3{
   min-height: 100vh;
   position: relative;
 
-  background-image: url("assets/ch.jpeg");
-  background-size: cover; /* contain */
+  background-image: url("assets/her1.jpeg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center 10%;
 
   display:flex;
   align-items:center;
@@ -341,14 +340,6 @@ h1, h2, h3{
   padding: 90px 18px 40px;
   text-align:center;
   color: #fff;
-}
-
-@media (max-width: 768px) {
-  .landing-hero {
-    min-height: 100vh;
-    background-attachment: scroll;
-    padding: 60px 16px 30px;
-  }
 }
 
 .landing-location a {
@@ -430,13 +421,6 @@ h1, h2, h3{
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .landing-location{
-    white-space: nowrap;
-    font-size: 14px;
-  }
-}
-
 .loc-emoji{
   font-size: 20px;
   line-height: 1;
@@ -466,7 +450,7 @@ h1, h2, h3{
 
 .landing-title{
   margin: 0;
-  font-size: 39px;
+  font-size: 40px;
   font-weight: 900;
   color: #fff;
 }
@@ -800,3 +784,31 @@ button, .choice, .btn, a {
   }
 }
 
+/* =========================
+   HERO LOGO (top center)
+========================= */
+.hero-logo {
+  position: absolute;
+  top: 24px;              /* distance from top */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;            /* above overlay */
+  pointer-events: auto;
+}
+
+.hero-logo img {
+  height: 150px;           /* desktop size */
+  width: auto;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-logo {
+    top: 14px;
+  }
+
+  .hero-logo img {
+    height: 72px;
+  }
+}
